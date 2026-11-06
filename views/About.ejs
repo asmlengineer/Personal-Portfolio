@@ -1,0 +1,356 @@
+<%- include('partials/Navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-950 text-white">
+<!-- ================= ABOUT HERO ================= -->
+<section class="py-20 px-6 text-center">
+
+    <div class="max-w-4xl mx-auto">
+
+        <p class="text-blue-400 font-semibold tracking-widest mb-3">
+            ABOUT ME
+        </p>
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Get to Know Me
+        </h1>
+
+        <p class="text-gray-400 text-lg leading-8">
+            Discover my journey, skills, interests and passion
+            for web development and technology.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT INTRO ================= -->
+<section class="pb-20 px-6">
+
+    <div class="max-w-6xl mx-auto
+                grid grid-cols-1 lg:grid-cols-2
+                gap-12 items-center">
+
+        <!-- Profile Image -->
+        <div class="flex justify-center">
+
+            <div class="relative">
+
+                <div class="absolute inset-0
+                            bg-blue-600
+                            rounded-2xl
+                            blur-2xl opacity-20">
+                </div>
+
+                <div class="relative
+                            w-72 h-80 md:w-80 md:h-96
+                            bg-gray-900
+                            border border-gray-800
+                            rounded-2xl
+                            overflow-hidden">
+
+                    <img
+                        src="/images/heroimage.png"
+                        alt="Profile Photo"
+                        class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- About Content -->
+        <div>
+
+            <p class="text-blue-400 font-semibold mb-3">
+                WHO I AM
+            </p>
+
+            <h2 class="text-3xl md:text-4xl
+                       font-bold mb-6">
+                Hello, I'm Ashish Gautam
+            </h2>
+
+            <p class="text-gray-400 leading-8 mb-5">
+                I am a passionate Web Developer and Programmer
+                who enjoys creating modern, responsive and
+                user-friendly websites and web applications.
+            </p>
+
+            <p class="text-gray-400 leading-8 mb-5">
+                I have a strong interest in frontend and backend
+                development and enjoy learning new technologies
+                to improve my development skills.
+            </p>
+
+            <p class="text-gray-400 leading-8 mb-8">
+                My goal is to build useful digital solutions
+                that provide a simple, attractive and engaging
+                experience for users.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-4">
+
+                <a href="/project"
+                   class="px-6 py-3
+                          bg-blue-600
+                          rounded-lg
+                          font-semibold
+                          hover:bg-blue-700
+                          transition">
+
+                    View My Projects
+
+                </a>
+
+                <a href="/contact"
+                   class="px-6 py-3
+                          border border-gray-700
+                          rounded-lg
+                          font-semibold
+                          text-gray-300
+                          hover:border-blue-500
+                          hover:text-blue-400
+                          transition">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MY JOURNEY ================= -->
+<section class="py-20 px-6 bg-gray-900">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+
+            <p class="text-blue-400 font-semibold mb-3">
+                MY JOURNEY
+            </p>
+
+            <h2 class="text-3xl md:text-4xl font-bold">
+                My Development Journey
+            </h2>
+
+        </div><div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    Diploma in Infomation Technology (DIT)
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                    Building the Foundation in Computer sector <br>
+                    and Acquiring Knoweldge about Computer and its function     
+                </p>
+            </div>
+         </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    High School
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                   Complete High School with 1st Division <br>
+                    with Information Technology as Additional Subject    
+                </p>
+            </div>
+         </div>
+         
+        
+         
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    Certification in Hardware Technology (CHT)
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                    Building a foundation in computer Hardware, <br>
+                    Component functions and basic problems in Computer System
+                </p>
+            </div>
+         </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    Intermediate
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                    Complete the Final Postmatrix class <br>
+                    with 1st Division
+                </p>
+            </div>            
+         </div>
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    Bachelors of Computer Application (BCA) 
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                    Currently pursuing BCA and Have Strong <br>
+                    Foundation in Applications such as Database <br>
+                    Programming Languages & have Domain MERN Stack
+                </p>
+            </div>            
+         </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+
+            <!-- Education -->
+            <div class="p-7
+                        bg-gray-950
+                        border border-gray-800
+                        rounded-2xl
+                        hover:border-blue-500
+                        hover:-translate-y-2
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            bg-blue-600
+                            rounded-xl
+                            flex items-center justify-center
+                            mb-5">
+
+                    <i class="fas fa-graduation-cap text-xl"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mb-3">
+                    Internship as MERN stack Developer 
+                </h3>
+
+                <p class="text-gray-400 leading-7">
+                    Complete 3 Months Intership as <br>
+                     MERN Stack in Codec Technologies Pvt.Ltd
+                </p>
+            </div>            
+         </div>
+      </div>
+    </div>
+  </section>
+  </body>
+    <%- include('partials/Footer.ejs') %>
+  </html>

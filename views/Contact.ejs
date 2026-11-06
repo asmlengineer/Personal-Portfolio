@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-white">
+    <%- include('partials/Navbar') %>
+
+    <main class="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
+      <section class="grid gap-12 lg:grid-cols-2 lg:items-start">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">Get in touch</p>
+          <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Let's build something great together.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+            Have a project in mind, a question, or just want to say hello? Send me a message and I'll get back to you soon.
+          </p>
+
+          <div class="mt-10 space-y-6">
+            <a href="mailto:ashish25122022gautam@gmail.com" class="flex items-center gap-4 text-slate-300 transition hover:text-cyan-400">
+              <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-400">✉</span>
+              <span><span class="block text-sm text-slate-500">Email</span>ashish25122022gautam@gmail.com</span>
+            </a>
+            <div class="flex items-center gap-4 text-slate-300">
+              <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-400">⌖</span>
+              <span><span class="block text-sm text-slate-500">Location</span>Puranpur, India </span>
+            </div>
+          </div>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-cyan-950/20 sm:p-8">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="name" class="mb-2 block text-sm font-medium text-slate-300">Name</label>
+              <input type="hidden" name="access_key" value="c0915024-ec1c-49ed-ac08-d070fffc573f">
+              <input id="name" name="name" type="text" required placeholder="Your name" class="w-full rounded-lg border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400" />
+            </div>
+            <div>
+              <label for="email" class="mb-2 block text-sm font-medium text-slate-300">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-lg border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400" />
+            </div>
+          </div>
+          <div class="mt-6">
+            <label for="subject" class="mb-2 block text-sm font-medium text-slate-300">Subject</label>
+            <input id="subject" name="subject" type="text" required placeholder="How can I help?" class="w-full rounded-lg border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400" />
+          </div>
+          <div class="mt-6">
+            <label for="message" class="mb-2 block text-sm font-medium text-slate-300">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..." class="w-full resize-none rounded-lg border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"></textarea>
+          </div>
+          <button type="submit" class="mt-6 w-full rounded-lg bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950">Send message</button>
+        </form>
+      </section>
+    </main>
+    <%- include('partials/Footer') %>
+  </body>
+</html>

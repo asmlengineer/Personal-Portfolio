@@ -1,0 +1,213 @@
+<%- include('partials/Navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-white">
+    <section class="min-h-[85vh] flex items-center">
+
+        <div class="max-w-7xl mx-auto px-6 w-full">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Hero Content -->
+                <div>
+
+                    <p class="text-blue-400 text-lg font-semibold mb-3">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Ashish Gautam
+                    </h1>
+
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-300 mt-4">
+                        Web Developer & Programmer
+                    </h2>
+
+                    <p class="text-gray-400 text-lg leading-relaxed mt-6 max-w-xl">
+                        I am a passionate web developer who enjoys creating
+                        modern, responsive and user-friendly websites and
+                        web applications using modern technologies.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4 mt-8">
+
+                        <a href="/project"
+                           class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
+                            View My Projects
+                        </a>
+
+                        <a href="/contact"
+                           class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Profile Image -->
+                <div class="flex justify-center">
+
+                    <div class="relative">
+
+                        <div class="absolute inset-0 bg-blue-500 rounded-full blur-3xl opacity-20">
+                        </div>
+
+                        <div class="relative w-72 h-72 sm:w-96 sm:h-96
+                                    rounded-full overflow-hidden
+                                    border-4 border-blue-500
+                                    bg-gray-800
+                                    flex items-center justify-center">
+
+                            <!-- Replace with your image -->
+                            <img src="/images/heroimage.png"
+                                 alt="Profile Photo"
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-12">
+
+                <p class="text-blue-600 font-semibold">
+                    MY SKILLS
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">
+                    Technologies I Work With
+                </h2>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- HTML -->
+                <div class="bg-gray-900 border border-gray-800
+                            rounded-xl p-6 text-center
+                            hover:border-blue-500
+                            hover:-translate-y-2
+                            transition">
+
+                    <h3 class="text-xl font-bold text-orange-400">
+                        HTML
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Web Structure
+                    </p>
+
+                </div>
+
+
+                <!-- CSS -->
+                <div class="bg-gray-900 border border-gray-800
+                            rounded-xl p-6 text-center
+                            hover:border-blue-500
+                            hover:-translate-y-2
+                            transition">
+
+                    <h3 class="text-xl font-bold text-blue-400">
+                        CSS
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Web Styling
+                    </p>
+
+                </div>
+
+
+                <!-- JavaScript -->
+                <div class="bg-gray-900 border border-gray-800
+                            rounded-xl p-6 text-center
+                            hover:border-blue-500
+                            hover:-translate-y-2
+                            transition">
+
+                    <h3 class="text-xl font-bold text-yellow-400">
+                        JavaScript
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Web Programming
+                    </p>
+
+                </div>
+
+
+                <!-- React -->
+                <div class="bg-gray-900 border border-gray-800
+                            rounded-xl p-6 text-center
+                            hover:border-blue-500
+                            hover:-translate-y-2
+                            transition">
+
+                    <h3 class="text-xl font-bold text-cyan-400">
+                        React
+                    </h3>
+
+                    <p class="text-gray-400 mt-2">
+                        Frontend Development
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section id="contact" class="bg-blue-600 py-16">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Let's Work Together
+            </h2>
+
+            <p class="text-blue-100 mt-4">
+                Have a project idea or want to connect?
+                Feel free to get in touch with me.
+            </p>
+
+            <a href="/contact"
+               class="inline-block mt-7 bg-white text-blue-600
+                      px-7 py-3 rounded-lg
+                      font-bold hover:bg-gray-100 transition">
+                Get In Touch
+            </a>
+
+        </div>
+
+    </section>
+    <%- include('partials/Footer') %>
+    
+</body>
+</html>

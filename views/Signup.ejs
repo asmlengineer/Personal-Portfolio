@@ -1,0 +1,431 @@
+<%- include('partials/Navbar.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white">
+    <!-- ================= SIGNUP SECTION ================= -->
+
+    <main class="min-h-[calc(100vh-73px)]
+                flex items-center justify-center
+                px-6 py-12">
+
+        <div class="w-full max-w-lg">
+
+
+            <!-- Signup Card -->
+
+            <div class="bg-gray-900
+                        border border-gray-800
+                        rounded-2xl
+                        shadow-2xl
+                        p-8">
+
+
+                <!-- Heading -->
+
+                <div class="text-center mb-8">
+
+                    <div class="w-16 h-16 mx-auto
+                                flex items-center justify-center
+                                bg-blue-600/20
+                                rounded-full mb-5">
+
+                        <span class="text-3xl">
+                            👤
+                        </span>
+
+                    </div>
+
+
+                    <h1 class="text-3xl font-bold">
+                        Create Your Account
+                    </h1>
+
+                    <p class="text-gray-400 mt-2">
+                        Join my portfolio community
+                    </p>
+
+                </div>
+                <% if(errors.length > 0) { %>
+                    <div class="bg-red-600/20 border border-red-500 text-red-300 px-4 py-3 rounded mb-4">
+                        <ul class="list-disc list-inside">
+                          <strong class="font-bold">Errors!</strong>  
+                            <% errors.forEach(error => { %>
+                                <li><%= error.msg %></li> 
+                            <% }) %>
+                        </ul>
+                    </div>
+                <% } %>  
+
+                <!-- Signup Form -->
+
+                <form action="#" method="POST" class="space-y-5">
+                    <!-- Full Name -->
+
+                    <div>
+
+                        <label for="name"
+                               class="block text-sm
+                                      font-medium
+                                      text-gray-300 mb-2">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            value="<%= oldInput.name ? oldInput.name : '' %>"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition">
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div>
+
+                        <label for="email"
+                               class="block text-sm
+                                      font-medium
+                                      text-gray-300 mb-2">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            value="<%= oldInput.email ? oldInput.email : '' %>"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition">
+                    </div>
+
+
+
+                    <!-- Username -->
+
+                    <div>
+
+                        <label for="username"
+                               class="block text-sm
+                                      font-medium
+                                      text-gray-300 mb-2">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition">
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div>
+
+                        <label for="password"
+                               class="block text-sm
+                                      font-medium
+                                      text-gray-300 mb-2">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="6"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition">
+                    </div>
+
+
+
+                    <!-- Confirm Password -->
+
+                    <div>
+
+                        <label for="confirmPassword"
+                               class="block text-sm
+                                      font-medium
+                                      text-gray-300 mb-2">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            minlength="6"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition">
+                    </div>
+
+
+
+                    <!-- Terms -->
+
+                    <div class="flex items-start gap-3">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                            class="w-4 h-4 mt-1
+                                   accent-blue-600">
+
+                        <label for="terms"
+                               class="text-sm text-gray-400">
+
+                            I agree to the
+
+                            <a href="#"
+                               class="text-blue-400
+                                      hover:text-blue-300">
+                                Terms & Conditions
+                            </a>
+
+                            and
+
+                            <a href="#"
+                               class="text-blue-400
+                                      hover:text-blue-300">
+                                Privacy Policy
+                            </a>.
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Signup Button -->
+
+                    <button
+                        type="submit"
+                        class="w-full
+                               bg-blue-600
+                               hover:bg-blue-700
+                               py-3
+                               rounded-lg
+                               font-semibold
+                               transition
+                               duration-300
+                               shadow-lg
+                               shadow-blue-600/20">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+
+
+                <!-- Divider -->
+
+                <div class="flex items-center gap-4 my-7">
+
+                    <div class="h-px bg-gray-700 flex-1"></div>
+
+                    <span class="text-gray-500 text-sm">
+                        OR
+                    </span>
+
+                    <div class="h-px bg-gray-700 flex-1"></div>
+
+                </div>
+
+
+
+                <!-- Social Signup -->
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <button
+                        type="button"
+                        class="border border-gray-700
+                               hover:bg-gray-800
+                               py-3 rounded-lg
+                               text-gray-300
+                               transition">
+
+                        GitHub
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="border border-gray-700
+                               hover:bg-gray-800
+                               py-3 rounded-lg
+                               text-gray-300
+                               transition">
+
+                        Google
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Login Link -->
+
+                <p class="text-center
+                          text-gray-400
+                          mt-7">
+
+                    Already have an account?
+
+                    <a href="login.html"
+                       class="text-blue-400
+                              hover:text-blue-300
+                              font-semibold">
+
+                        Login
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-gray-950
+                   border-t border-gray-800
+                   py-7">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col
+                        md:flex-row
+                        justify-between
+                        items-center
+                        gap-4">
+
+                <p class="text-gray-500 text-sm">
+                    © 2026 MyPortfolio. All Rights Reserved.
+                </p>
+
+
+                <div class="flex gap-6">
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        GitHub
+                    </a>
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        LinkedIn
+                    </a>
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+<%- include('partials/Footer.ejs') %>
+
+</body>
+</html>

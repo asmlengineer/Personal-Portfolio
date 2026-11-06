@@ -1,0 +1,292 @@
+<%- include('partials/Navbar') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gray-950 text-white">
+
+    <!-- ================= LOGIN SECTION ================= -->
+    <main class="min-h-[calc(100vh-73px)]
+                flex items-center justify-center
+                px-6 py-12">
+
+        <div class="w-full max-w-md">
+
+            <!-- Login Card -->
+            <div class="bg-gray-900
+                        border border-gray-800
+                        rounded-2xl
+                        shadow-2xl
+                        p-8">
+
+                <!-- Heading -->
+                <div class="text-center mb-8">
+
+                    <div class="w-16 h-16 mx-auto
+                                flex items-center justify-center
+                                bg-blue-600/20
+                                rounded-full
+                                mb-5">
+
+                        <span class="text-3xl">
+                            🔐
+                        </span>
+
+                    </div>
+
+                    <h1 class="text-3xl font-bold">
+                        Welcome Back
+                    </h1>
+
+                    <p class="text-gray-400 mt-2">
+                        Login to your portfolio account
+                    </p>
+                </div>
+
+                <!-- Login Form -->               
+                <form action="/login" method="POST" class="space-y-5">
+                <% if (errors.length > 0) { %>
+                    <div class="bg-red-600/20 border border-red-500 text-red-300 px-4 py-3 rounded mb-4">
+                        <ul class="list-disc list-inside">
+                          <strong class="font-bold">Errors!</strong>  
+                            <% errors.forEach(error => { %>
+                                <li><%= error.msg %></li> 
+                            <% }) %>
+                        </ul>
+                    </div>
+                 <% } %>  
+                    <!-- Email -->
+                    <div>
+
+                        <label for="email"
+                               class="block text-sm
+                                      font-medium text-gray-300 mb-2">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value="<%= oldInput.email || '' %>"
+                            placeholder="Enter your email"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition"
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div>
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <label for="password"
+                                   class="block text-sm
+                                          font-medium text-gray-300">
+                                Password
+                            </label>
+
+                            <a href="#"
+                               class="text-sm text-blue-400
+                                      hover:text-blue-300">
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                            class="w-full
+                                   bg-gray-800
+                                   border border-gray-700
+                                   rounded-lg
+                                   px-4 py-3
+                                   text-white
+                                   placeholder-gray-500
+                                   outline-none
+                                   focus:border-blue-500
+                                   focus:ring-2
+                                   focus:ring-blue-500/20
+                                   transition"
+                        >
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="flex items-center gap-2">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember"
+                            class="w-4 h-4
+                                   accent-blue-600">
+
+                        <label for="remember"
+                               class="text-sm text-gray-400">
+                            Remember me
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="w-full
+                               bg-blue-600
+                               hover:bg-blue-700
+                               py-3
+                               rounded-lg
+                               font-semibold
+                               text-white
+                               transition
+                               duration-300
+                               shadow-lg
+                               shadow-blue-600/20">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div class="flex items-center gap-4 my-7">
+
+                    <div class="h-px bg-gray-700 flex-1"></div>
+
+                    <span class="text-gray-500 text-sm">
+                        OR
+                    </span>
+
+                    <div class="h-px bg-gray-700 flex-1"></div>
+
+                </div>
+
+
+                <!-- Social Login -->
+                <div class="grid grid-cols-2 gap-4">
+
+                    <button
+                        type="button"
+                        class="border border-gray-700
+                               hover:bg-gray-800
+                               py-3 rounded-lg
+                               text-gray-300
+                               transition">
+
+                        GitHub
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="border border-gray-700
+                               hover:bg-gray-800
+                               py-3 rounded-lg
+                               text-gray-300
+                               transition">
+
+                        Google
+
+                    </button>
+
+                </div>
+
+
+                <!-- Signup -->
+                <p class="text-center text-gray-400 mt-7">
+
+                    Don't have an account?
+
+                    <a href="signup.html"
+                       class="text-blue-400
+                              hover:text-blue-300
+                              font-semibold">
+
+                        Create Account
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-gray-800
+                   bg-gray-950
+                   py-6">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col
+                        md:flex-row
+                        justify-between
+                        items-center
+                        gap-3">
+
+                <p class="text-gray-500 text-sm">
+                    © 2026 MyPortfolio. All Rights Reserved.
+                </p>
+
+                <div class="flex gap-5">
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        GitHub
+                    </a>
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        LinkedIn
+                    </a>
+
+                    <a href="#"
+                       class="text-gray-500
+                              hover:text-blue-400
+                              text-sm">
+                        Instagram
+                    </a>
+                </div> 
+
+    </footer>
+    <%- include('partials/Footer') %>
+</body>
+</html>
